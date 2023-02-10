@@ -7,15 +7,11 @@ compiler.version=2023.0
 compiler.runtime=dynamic
 build_type=Release
 
-gtest:build_type=Release
-gtest:compiler=msvc
-gtest:compiler.mode=dynamic
-gtest:compiler.version=193
-
-[buildenv]
-CC=icx.exe
-CXX=icx.exe
-FC=ifort.exe
+gtest*:compiler=msvc
+gtest*:compiler.runtime=dynamic
+gtest*:compiler.runtime_type=Release
+gtest*:compiler.version=193
+gtest*:build_type=Release
 
 [conf]
 tools.intel:installation_path=C:\Program Files (x86)\Intel\oneAPI
