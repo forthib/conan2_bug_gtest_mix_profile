@@ -1,0 +1,331 @@
+Microsoft Windows [version 10.0.19042.2364]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Temp\test_conan2_gtest_intel_msvc>test
+-- installing conan and cmake
+Collecting conan
+  Using cached conan-2.0.0b9.tar.gz (345 kB)
+Collecting requests<3.0.0,>=2.25
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting urllib3<1.27,>=1.26.6
+  Using cached urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Collecting colorama<0.5.0,>=0.3.3
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting PyYAML<=6.0,>=3.11
+  Using cached PyYAML-6.0-cp310-cp310-win_amd64.whl (151 kB)
+Collecting patch-ng<1.18,>=1.17.4
+  Using cached patch-ng-1.17.4.tar.gz (17 kB)
+Collecting fasteners>=0.14.1
+  Using cached fasteners-0.18-py3-none-any.whl (18 kB)
+Collecting Jinja2<4.0.0,>=3.0
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting python-dateutil<3,>=2.7.0
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.2-cp310-cp310-win_amd64.whl (16 kB)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.0.1-cp310-cp310-win_amd64.whl (96 kB)
+Using legacy 'setup.py install' for conan, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for patch-ng, since package 'wheel' is not installed.
+Installing collected packages: urllib3, six, MarkupSafe, idna, charset-normalizer, certifi, requests, PyYAML, python-dateutil, patch-ng, Jinja2, fasteners, colorama, conan
+    Running setup.py install for patch-ng ... done
+    Running setup.py install for conan ... done
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.2 PyYAML-6.0 certifi-2022.12.7 charset-normalizer-3.0.1 colorama-0.4.6 conan-2.0.0b9 fasteners-0.18 idna-3.4 patch-ng-1.17.4 python-dateutil-2.8.2 requests-2.28.2 six-1.16.0 urllib3-1.26.14
+WARNING: You are using pip version 21.2.4; however, version 23.0 is available.
+You should consider upgrading via the 'C:\Temp\test_conan2_gtest_intel_msvc\.venv\Scripts\python.exe -m pip install --upgrade pip' command.
+Collecting cmake
+  Using cached cmake-3.25.2-py2.py3-none-win_amd64.whl (32.6 MB)
+Installing collected packages: cmake
+Successfully installed cmake-3.25.2
+WARNING: You are using pip version 21.2.4; however, version 23.0 is available.
+You should consider upgrading via the 'C:\Temp\test_conan2_gtest_intel_msvc\.venv\Scripts\python.exe -m pip install --upgrade pip' command.
+-- conan config install
+Initialized file: 'C:\Temp\test_conan2_gtest_intel_msvc\.conan\settings.yml'
+Initialized file: 'C:\Temp\test_conan2_gtest_intel_msvc\.conan\extensions\plugins\compatibility\compatibility.py'
+Initialized file: 'C:\Temp\test_conan2_gtest_intel_msvc\.conan\extensions\plugins\compatibility\cppstd_compat.py'
+Initialized file: 'C:\Temp\test_conan2_gtest_intel_msvc\.conan\extensions\plugins\profile.py'
+Installing settings.yml
+Copying file win_intel to C:\Temp\test_conan2_gtest_intel_msvc\.conan\profiles
+Copying file win_visual to C:\Temp\test_conan2_gtest_intel_msvc\.conan\profiles
+-- conan install with win_visual --build=missing
+
+-------- Input profiles --------
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=193
+os=Windows
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=193
+os=Windows
+
+
+-------- Computing dependency graph --------
+gtest/1.13.0: Not found in local cache, looking in remotes...
+gtest/1.13.0: Checking remote: conancenter
+gtest/1.13.0: Trying with 'conancenter'...
+Downloading conanfile.py
+Downloading conanmanifest.txt
+Downloading conan_export.tgz
+Decompressing conan_export.tgz
+gtest/1.13.0: Downloaded recipe revision e3623ac1ee9fb169ed4bdc2a95080859
+Graph root
+    conanfile.txt: C:\Temp\test_conan2_gtest_intel_msvc\conanfile.txt
+Requirements
+    gtest/1.13.0#e3623ac1ee9fb169ed4bdc2a95080859 - Downloaded (conancenter)
+
+-------- Computing necessary packages --------
+Requirements
+    gtest/1.13.0#e3623ac1ee9fb169ed4bdc2a95080859:491f95f900f17e2e30ef45f1450072ffc210b2df - Build
+
+-------- Installing packages --------
+
+-------- Installing (downloading, building) binaries... --------
+gtest/1.13.0: Sources downloaded from 'conancenter'
+gtest/1.13.0: Calling source() in C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\gtest88c067220c1fe\s\src
+Downloading v1.13.0.tar.gz
+
+gtest/1.13.0: Copying sources to build folder
+gtest/1.13.0: Building your package in C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b
+gtest/1.13.0: Calling generate()
+gtest/1.13.0: Preset 'default' added to CMakePresets.json. Invoke it manually using 'cmake --preset default'
+gtest/1.13.0: If your CMake version is not compatible with CMakePresets (<3.19) call cmake like: 'cmake <path> -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build\generators\conan_toolchain.cmake -DCMAKE_POLICY_DEFAULT_CMP0077=NEW -DCMAKE_POLICY_DEFAULT_CMP0091=NEW'
+gtest/1.13.0: Aggregating env generators
+gtest/1.13.0: Calling build()
+gtest/1.13.0: apply_conandata_patches(): No patches defined in conandata
+gtest/1.13.0: CMake command: cmake -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE="C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/build/generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p" -DCMAKE_POLICY_DEFAULT_CMP0077="NEW" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\src"
+gtest/1.13.0: RUN: cmake -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE="C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/build/generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p" -DCMAKE_POLICY_DEFAULT_CMP0077="NEW" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\src"
+-- Using Conan toolchain: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/build/generators/conan_toolchain.cmake
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19042.
+-- The C compiler identification is MSVC 19.33.31630.0
+-- The CXX compiler identification is MSVC 19.33.31630.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: C:/Temp/test_conan2_gtest_intel_msvc/.venv/Scripts/python.exe (found version "3.10.2") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/build
+gtest/1.13.0: CMake command: cmake --build "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build" --config Release
+gtest/1.13.0: RUN: cmake --build "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build" --config Release
+MSBuild version 17.3.1+2badb37d1 for .NET Framework
+  Checking Build System
+  Building Custom Rule C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/src/googlemock/CMakeLists.t
+  xt
+  gtest-all.cc
+  gmock-all.cc
+  gmock.vcxproj -> C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build\lib\Release\gmock.lib
+  Building Custom Rule C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/src/googlemock/CMakeLists.t
+  xt
+  gtest-all.cc
+  gmock-all.cc
+  gmock_main.cc
+  gmock_main.vcxproj -> C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build\lib\Release\gmock_ma
+  in.lib
+  Building Custom Rule C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/src/googletest/CMakeLists.t
+  xt
+  gtest-all.cc
+  gtest.vcxproj -> C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build\lib\Release\gtest.lib
+  Building Custom Rule C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/src/googletest/CMakeLists.t
+  xt
+  gtest_main.cc
+  gtest_main.vcxproj -> C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build\lib\Release\gtest_ma
+  in.lib
+  Building Custom Rule C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/b/src/CMakeLists.txt
+gtest/1.13.0: Package '491f95f900f17e2e30ef45f1450072ffc210b2df' built
+gtest/1.13.0: Build folder C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build
+gtest/1.13.0: Generated conaninfo.txt
+gtest/1.13.0: Generating the package
+gtest/1.13.0: Temporary package folder C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\p
+gtest/1.13.0: Calling package()
+gtest/1.13.0: Copied 1 file: LICENSE
+gtest/1.13.0: CMake command: cmake --install "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build" --config Release --prefix "C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p"
+gtest/1.13.0: RUN: cmake --install "C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\t\gtestfa2f0e8e28744\b\build" --config Release --prefix "C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p"
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-actions.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-cardinalities.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-function-mocker.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-matchers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-more-actions.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-more-matchers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-nice-strict.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock-spec-builders.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/gmock.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/custom
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/custom/gmock-port.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/custom/README.md
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/gmock-internal-utils.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/gmock-port.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gmock/internal/gmock-pp.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/gmock.lib
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/gmock_main.lib
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/pkgconfig/gmock.pc
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/pkgconfig/gmock_main.pc
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/cmake/GTest/GTestTargets.cmake
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/cmake/GTest/GTestTargets-release.cmake
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-assertion-result.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-death-test.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-matchers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-message.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-param-test.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-printers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-spi.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-test-part.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest-typed-test.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest_pred_impl.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/gtest_prod.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/custom
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/custom/gtest-port.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/custom/gtest-printers.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/custom/gtest.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/custom/README.md
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-filepath.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-internal.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-param-util.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-port-arch.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-port.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-string.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/include/gtest/internal/gtest-type-util.h
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/gtest.lib
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/gtest_main.lib
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/pkgconfig/gtest.pc
+-- Installing: C:/Temp/test_conan2_gtest_intel_msvc/.conan/p/t/gtestfa2f0e8e28744/p/lib/pkgconfig/gtest_main.pc
+gtest/1.13.0 package(): Packaged 38 '.h' files
+gtest/1.13.0 package(): Packaged 2 '.md' files: README.md, README.md
+gtest/1.13.0 package(): Packaged 4 '.lib' files: gmock.lib, gmock_main.lib, gtest.lib, gtest_main.lib
+gtest/1.13.0 package(): Packaged 1 file: LICENSE
+gtest/1.13.0: Package '491f95f900f17e2e30ef45f1450072ffc210b2df' created
+gtest/1.13.0: Created package revision b3ac1d63ecbafaf5d3b500b0f6d1e340
+gtest/1.13.0: Full package reference: gtest/1.13.0#e3623ac1ee9fb169ed4bdc2a95080859:491f95f900f17e2e30ef45f1450072ffc210b2df#b3ac1d63ecbafaf5d3b500b0f6d1e340
+gtest/1.13.0: Package folder C:\Temp\test_conan2_gtest_intel_msvc\.conan\p\gtestddd21968c7160\p
+WARN: The use of 'cpp_info.names' is deprecated in Conan 2.0 and will be removed in Conan 2.X. Please, update your recipes unless you are maintaining compatibility with Conan 1.X
+WARN: The use of 'cpp_info.names' is deprecated in Conan 2.0 and will be removed in Conan 2.X. Please, update your recipes unless you are maintaining compatibility with Conan 1.X
+WARN: The use of 'cpp_info.names' is deprecated in Conan 2.0 and will be removed in Conan 2.X. Please, update your recipes unless you are maintaining compatibility with Conan 1.X
+WARN: The use of 'cpp_info.names' is deprecated in Conan 2.0 and will be removed in Conan 2.X. Please, update your recipes unless you are maintaining compatibility with Conan 1.X
+
+-------- Finalizing install (deploy, generators) --------
+conanfile.txt: Aggregating env generators
+-- conan install with win_intel
+
+-------- Input profiles --------
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=intel-cc
+compiler.mode=icx
+compiler.runtime=dynamic
+compiler.version=2023.0
+os=Windows
+gtest:build_type=Release
+gtest:compiler=msvc
+gtest:compiler.mode=dynamic
+gtest:compiler.version=193
+[conf]
+tools.intel:installation_path=C:\Program Files (x86)\Intel\oneAPI
+[buildenv]
+CC=icx.exe
+CXX=icx.exe
+FC=ifort.exe
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=intel-cc
+compiler.mode=icx
+compiler.runtime=dynamic
+compiler.version=2023.0
+os=Windows
+gtest:build_type=Release
+gtest:compiler=msvc
+gtest:compiler.mode=dynamic
+gtest:compiler.version=193
+[conf]
+tools.intel:installation_path=C:\Program Files (x86)\Intel\oneAPI
+[buildenv]
+CC=icx.exe
+CXX=icx.exe
+FC=ifort.exe
+
+
+-------- Computing dependency graph --------
+Graph root
+    conanfile.txt: C:\Temp\test_conan2_gtest_intel_msvc\conanfile.txt
+Requirements
+    gtest/1.13.0#e3623ac1ee9fb169ed4bdc2a95080859 - Cache
+
+-------- Computing necessary packages --------
+Requirements
+    gtest/1.13.0#e3623ac1ee9fb169ed4bdc2a95080859:6eacead060ccd25ef19f98618d0fb9ff4687c13f - Missing
+
+-------- Installing packages --------
+
+-------- Installing (downloading, building) binaries... --------
+ERROR: Missing binary: gtest/1.13.0:6eacead060ccd25ef19f98618d0fb9ff4687c13f
+
+gtest/1.13.0: WARN: Can't find a 'gtest/1.13.0' package binary '6eacead060ccd25ef19f98618d0fb9ff4687c13f' for the configuration:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=intel-cc
+compiler.mode=icx
+compiler.runtime=dynamic
+compiler.version=2023.0
+os=Windows
+[options]
+build_gmock=True
+hide_symbols=False
+shared=False
+
+ERROR: Missing prebuilt package for 'gtest/1.13.0'
+Use 'conan list packages gtest/1.13.0 --format=html -r=remote > table.html' and open the table.html file to see available packages
+Or try to build locally from sources with '--build=gtest/1.13.0'
+
+More Info at 'https://docs.conan.io/en/latest/faq/troubleshooting.html#error-missing-prebuilt-package'
+
+
+(.venv) C:\Temp\test_conan2_gtest_intel_msvc>
